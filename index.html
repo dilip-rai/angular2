@@ -20,13 +20,13 @@
     <script>
       System.config({
         packages: {        
-          app: {
+          home: {
             format: 'register',
             defaultExtension: 'js'
           }
         }
       });
-      System.import('app/main')
+      System.import('home/main')
             .then(null, console.error.bind(console));
     </script>
 
@@ -34,7 +34,7 @@
 
   <!-- 3. Display the application -->
   <body>
-    <my-app>Loading...</my-app>
+    <home-app>Loading...</home-app>
   </body>
 
 </html>
