@@ -21,7 +21,7 @@ import {SelectSchoolComponent} from './select-school.component';
 		useAsDefault: true
 	},
 	{
-		path: '/select-school',
+		path: '/select-school/:city',
 		name: 'SelectSchool',
 		component: SelectSchoolComponent,
 	}

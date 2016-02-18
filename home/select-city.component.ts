@@ -1,6 +1,5 @@
 import {Component, OnInit} from 'angular2/core';
 import {Router} from 'angular2/router';
-import {City} from './city'
 
 @Component({
 	selector: 'home-select-city',
@@ -9,22 +8,22 @@ import {City} from './city'
 })
 export class SelectCityComponent implements OnInit {
 	title = "Select city";
-	cities: City[] = [
-		{"id": 1, "name": "Bengaluru"},
-		{"id": 2, "name": "Mysuru"},
-		{"id": 3, "name": "Hyderabad"},
-		{"id": 4, "name": "Chennai"},
-		{"id": 5, "name": "Mumbai"},
-		{"id": 6, "name": "Tumkuru"},
-		{"id": 7, "name": "New Delhi"},
-		{"id": 8, "name": "Bhopal"},
-		{"id": 9, "name": "Chandigarh"},
-		{"id": 10, "name": "Patiala"}
+	cities: string[] = [
+		"Bengaluru",
+		"Mysuru",
+		"Hyderabad",
+		"Chennai",
+		"Mumbai",
+		"Tumkuru",
+		"New Delhi",
+		"Bhopal",
+		"Chandigarh",
+		"Patiala"
 	];
 	constructor(private _router: Router){}
 	ngOnInit() {}
-	gotoCity(city:City) {
-		let link = ['SelectSchool', {id: city.id}];
+	gotoCity(city:string) {
+		let link = ['SelectSchool', {city: city}];
 		this._router.navigate(link);
 	}
 }
